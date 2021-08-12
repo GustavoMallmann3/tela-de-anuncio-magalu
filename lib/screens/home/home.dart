@@ -50,7 +50,11 @@ class _HomeState extends State<Home> {
                 Icons.favorite_outline,
                 color: pinkTheme,
               ),
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            _contact.isFavorite = !_contact.isFavorite;
+          });
+        },
       ),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
